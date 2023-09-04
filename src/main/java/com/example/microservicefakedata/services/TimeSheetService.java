@@ -8,7 +8,6 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 import java.util.Calendar;
-import java.util.Locale;
 
 @Service
 public class TimeSheetService {
@@ -38,7 +37,7 @@ public class TimeSheetService {
         fakeTimeSheet.setDate(faker.date().between(stratDate, endDate));
 
         Logger logger = LogManager.getLogger(this.getClass());
-        logger.info("Новое время " + fakeTimeSheet.toString());
+        logger.info("Новое время " + fakeTimeSheet);
 
         return fakeTimeSheet;
     }

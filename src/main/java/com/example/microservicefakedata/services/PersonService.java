@@ -1,7 +1,6 @@
 package com.example.microservicefakedata.services;
 
 import com.example.microservicefakedata.model.Person;
-import lombok.ToString;
 import net.datafaker.Faker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -28,7 +27,7 @@ public class PersonService {
         person.setPersonNumber(faker.number().numberBetween(1, 300));
 
         Logger logger = LogManager.getLogger(this.getClass());
-        logger.info("Новая персона " + person.toString());
+        logger.info("Новая персона " + person);
 
         return person;
 
